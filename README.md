@@ -15,25 +15,34 @@ Just use one of the following Classes as Parent Class and or just choose them in
 Parentclasses are:
 
 Actors:
+- Component
 - Projectile
+- ScatterBall
+- ScatterMine
 - SelectedIcon
+- Shield
+- UIWeaponIndicator
 - Waypoint
+- WeaponBase
 
 Animations:
-- UnitBaseAnimInstance (Only used for linking UnitState to CharAnimState)
+- MouseBotBaseAnimInstance ( Only used for linking Animations atm. Datatable for Blendspaces will be added later)
+- UnitBaseAnimInstance ( Usable with Blenspaces via DataTable )
 
 Characters:
 - CameraBase ( A Small RTS Camera with cool responsive Camera-Jump)
-- UnitBase (This is the Key Element of this Product)
+- UnitBase ( Used for Enemys - Ranged, Meele, Flying Units - Propertys like MaxHealth, Attackspeeed, Walkspeed are Adaptable)
+- ExtendedUnitBase ( Parent of UnitBase. Is the TopDown Character. Even more Adjustable Propertys. Can use WeaponTable, ScatterMine Shield and Spawn MouseBots)
 
 Controller:
-- ControllerBase (Should be used to Control the UnitBase)
+- ControllerBase (Can be used to Control the UnitBase and the ExtendedUnitBase)
 - UnitControllerBase (This is needed for the UnitBase)
 
 Hud:
 - HUDBase
 
 Widgets:
+- UnitBaseActionBar (Used mainly for the Extended UnitBase)
 - UnitBaseHealthBar
 
 
