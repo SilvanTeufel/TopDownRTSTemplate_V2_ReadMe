@@ -1,6 +1,6 @@
 # TopDownRTSTemplate_V2_ReadMe
 This is the ReadMe of my TopDownRTSTemplate V2.0.0 and higher, a Plugin which is available in Unreal-Marketplace.
-This Documentation is still in Work, and will update on Daily Baseses.
+This Documentation is still in Work, and will update on daily baseses.
 
 V 2.1.0
 
