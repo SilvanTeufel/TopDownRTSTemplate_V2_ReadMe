@@ -1,11 +1,14 @@
 # TopDownRTSTemplate_V2_ReadMe
-This is the ReadMe of my TopDownRTSTemplate V2.0.0 and higher, a Plugin which is available in Unreal-Marketplace.
+This is the ReadMe of my TopDownRTSTemplate V2.0.0 and later, a Plugin which is available in Unreal-Marketplace.
 This Documentation is still in Work, and will update on daily baseses.
 
 V 2.1.0
 
 Big Rework of nearly all Classes. All Propertys Changeable in Details Panel. Added new Classes and Abilitys as well as
-different Enemy Types. Choose a Projectile for your Weapon and more. Video will follow soon.
+different Enemy Types. Choose a Projectile for your Weapon and more.
+
+Video on Youtube: https://www.youtube.com/watch?v=_lsvcfbm820&t=0s
+
 
 ![image](https://user-images.githubusercontent.com/45244380/209093715-f45a66b4-9fb7-4e66-b08a-8ea6690015fe.png)
 
