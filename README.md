@@ -38,7 +38,7 @@ Debugger Settings:
 
 ![image](https://user-images.githubusercontent.com/45244380/209095690-e4918f3c-1a06-4fa1-a333-ed95cf79e720.png)
 
-Or Import my Settings:
+Or Import my Settings (for you this Plugin is inside the Engine folder):
 
 ![image](https://user-images.githubusercontent.com/45244380/209095332-e0fd7ee9-6fd1-4837-8a3f-0e4a78e22936.png)
 
