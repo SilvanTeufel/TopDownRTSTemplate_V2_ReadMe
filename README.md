@@ -7,7 +7,61 @@ Big Rework of nearly all Classes. All Propertys Changeable in Details Panel. Add
 different Enemy Types. Choose a Projectile for your Weapon and more. Video will follow soon.
 
 ![image](https://user-images.githubusercontent.com/45244380/209093715-f45a66b4-9fb7-4e66-b08a-8ea6690015fe.png)
-	
+
+
+
+## Download the Plugin
+
+https://www.unrealengine.com/marketplace/en-US/product/5653ae7bd50e4c52a2ed962ab01e1717
+
+If you have downloaded the plugin it can be found in your Unreal Engine folder:
+C:\Program Files\Epic Games\UE_5.0\Engine\Plugins\TopDownRTSTemplate (for example)
+If you can find this folder in your enginge plugins folder the download was successful.
+If the plugin is in another folder, you should copy it here.
+
+## Install the Plugin
+
+Open Unreal Editor. Click Edit -> Plugins to open the plugin window.
+Search for TopDownRTSTemplate and put a check mark at it.
+
+## Import Keyboard Settings
+
+You Can create your own Shortcuts:
+
+![image](https://user-images.githubusercontent.com/45244380/209095077-73e86661-e4b4-4b20-9375-76edbc34b994.png)
+
+Maps and Mode Settings:
+
+![image](https://user-images.githubusercontent.com/45244380/209095420-3fc221ef-ba44-40ae-ad7f-e33671ea12e8.png)
+
+Debugger Settings:
+
+![image](https://user-images.githubusercontent.com/45244380/209095690-e4918f3c-1a06-4fa1-a333-ed95cf79e720.png)
+
+Or Import my Settings:
+
+![image](https://user-images.githubusercontent.com/45244380/209095332-e0fd7ee9-6fd1-4837-8a3f-0e4a78e22936.png)
+
+
+
+
+
+
+## Test Example Map
+
+Open Unreal Editor. Open folder (In Unreal Editor folder tab):
+All\Engine\Plugins\TopDownRTSTemplate\Content\TopDownRTSTemplate\Level\levelOne
+
+Open Unreal Editor. Open folder (In Unreal Editor folder tab):
+All\Engine\Plugins\TopDownRTSTemplate\Content\TopDownRTSTemplateLevel\levelTwo
+
+## Example Blueprints
+
+Your can find example Blueprints in the Unreal Editor as well:
+All\Engine\Plugins\TopDownRTSTemplate\Content\TopDownRTSTemplate\Blueprints
+
+This Blueprints use the Parent Classes from TopDownRTSTemplate Plugin, which you can use for your Blueprints.
+
 ## Parent Classes
 
 If TopDownRTSTemplate is installed the Classes can be used as Parent Class in Blueprint, so all functions from this Class are available.
