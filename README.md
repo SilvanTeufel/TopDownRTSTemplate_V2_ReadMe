@@ -44,8 +44,7 @@ Or Import my Settings (for you this Plugin is inside the Engine folder):
 ![image](https://user-images.githubusercontent.com/45244380/209095332-e0fd7ee9-6fd1-4837-8a3f-0e4a78e22936.png)
 
 
-
-
+You can also Download the Settings here from Github.
 
 
 ## Test Example Map
