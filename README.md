@@ -187,6 +187,7 @@ Widget Setup
 |float TeleportRadius = 70.f;						| Radius which is allowed to Teleport		 		|
 |float TeleportFailedDmg = 10.f;       					| Dmg recived when Teleporting out of Radius			|
 |float TeleportManaCost = 30.f;        					| Mana Cost when using Teleport					|
+|TSubclassOf<class AWeaponBase> WeaponClass;				| Choose BP_WeaponBase Class (And add Weapontable in BP_WeaponBase)|	
 |TSubclassOf<class AScatterMine> ScatterMineBaseClass;			| Choose BP_ScatterMine Class (which has also Details to change)|
 |TSubclassOf<class AShield> ShieldBaseClass;     			| Choose BP_Shield Class (which has also Details to change)	|
 |TSubclassOf<class AMouseBotBase> MouseBotBaseClass;         		| Choose BP_MouseBotBase Class (which has also Details to change) |
@@ -203,31 +204,22 @@ Widget Setup
 
 |Properties (BlueprintReadWrite)                  		|Note                         |
 |---------------------------------------------------------------|-----------------------------|
-|float UnitControlTimer = 0.0f;        				| Used in UnitControllerBase Statemachine            |
-|bool ToggleUnitDetection = false;				| Is Used in ControllerBase to toggle unit to Attack |
-|AUnitBase* UnitToChase;       					| Is set to the Unit which should be attacked        |
-|TArray <AUnitBase*> UnitsToChase;          			| Array of all available Units		             |
-|float Health;							| Current Health of the Unit			     |
-|TArray <FVector> RunLocationArray;				| Used for MoveThroughWaypoints in the HUD	     |
-|int32 RunLocationArrayIterator;				| Used for the Iteration of the Array		     |
-|FVector RunLocation;						| Is the Location where the Unit should Run. Used in "Run"|
-|class ASelectedIcon* SelectedIcon;				| The Icon is Hidden when Character is not selected|
-|class AProjectile* Projectile;					| The Current Projectile|
+|class AWeaponBase* Weapon;       				| The Pointer to the Weapon             |
+|TArray<FString> Weapons;					| Weapon Names gets stored in an Array	|
+|TArray<int> MaxMagSize;					| Comes from DataTable 			|
+|TArray<int> MagSize;						| Current Magazine Size			|
+|int ActualWeaponId = 1;					| Actual Weapon Id is stored here 	|
+|UMaterialInterface* ProjectileMaterial;			| Comes from DataTable 			|
+|UStaticMesh* ProjectileMesh;					| Comes from DataTable 			|
+|FVector TeleportLocation;					| Current Location where to Teleport - comes from ControllerBase |	
 	
 |Functions (BlueprintCallable)                  		|Note                         |
 |---------------------------------------------------------------|-----------------------------|
-|void IsAttacked(AActor* AttackingCharacter);       		| Gets called when Unit is attacked. Called in UnitControllerBase |
-|void SetWalkSpeed(float Speed);      				| Set Max Walkspeed           |
-|bool SetNextUnitToChase();        				| Chooses UnitToChase from UnitsToChase (closest unit is choosen) |
-|void SetWaypoint(class AWaypoint* NewNextWaypoint);        	| Sets the new Waypoint. Unit walks to Waypoint in State "Patrol" |
-|void SetUnitState( TEnumAsByte<UnitData::EState> NewUnitState);| Used to Set the State of the Unit (UnitControllerBase->UnitControlStateMachine) |
-|TEnumAsByte<UnitData::EState> GetUnitState();       		| Get the current Unit State          		|
-|float GetHealth();       					| Get current health of the Unit          	|
-|void SetHealth(float NewHealth);       			| Set current health of the Unit         	|
-|float GetMaxHealth();      					| Get max health of the Unit            	|
-|void SetSelected();       					| Sets the SelectedIcon selected           	|
-|void SetDeselected();      					| Sets the SelectedIcon delected            	|
-|void SpawnSelectedIcon();       				| Spawns the SelectedIcon         		|		
+|void WeaponSpawn();						| Spawns the Weapon 			|
+|void ChangeWeapon(FString WeaponName);     			| Change the Weapon        		|
+|void Fire();      						| Plays the Fire Animation of the Weapon|
+|class USkeletalMesh* GetWeaponMesh();				| Gets the WeaponMesh from WeaponTable	|
+|void ReloadWeapon();						| Reload the Weapon 			|
 
 # CameraBase
 
