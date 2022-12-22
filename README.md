@@ -6,6 +6,7 @@ V 2.1.0
 Big Rework of nearly all Classes. All Propertys Changeable in Details Panel. Added new Classes and Abilitys as well as
 different Enemy Types. Choose a Projectile for your Weapon and more. Video will follow soon.
 
+![image](https://user-images.githubusercontent.com/45244380/209093715-f45a66b4-9fb7-4e66-b08a-8ea6690015fe.png)
 	
 ## Parent Classes
 
@@ -49,9 +50,6 @@ Hud:
 Widgets:
 - UnitBaseActionBar (Used mainly for the Extended UnitBase)
 - UnitBaseHealthBar (The Healthbar for the UnitBase and the ExtendedUnitBase)
-
-
-![image](https://user-images.githubusercontent.com/45244380/209093715-f45a66b4-9fb7-4e66-b08a-8ea6690015fe.png)
 
 
 For ControllerBase, if you want to use the Controller, you have to adapt your Settings (Pictures in "Document/Inputs" Folder), or "Import Keyboard Settings" (topic above).
