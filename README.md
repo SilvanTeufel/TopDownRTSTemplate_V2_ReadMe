@@ -103,7 +103,7 @@ Widget Setup
 
 # UnitBase
 
-|UnitStates (The Statemachine is in UnitControllerBase)        	|Note                         |
+|UnitStates (The Statemachine is in UnitControllerBase + ExtendedUnitControllerBase)        	|Note                         |
 |---------------------------------------------------------------|-----------------------------|
 |Idle     UMETA(DisplayName = "Idle")       			| CharAnimState = Idle	      |
 |Run     UMETA(DisplayName = "Run"),    			| CharAnimState = Run         |
@@ -114,6 +114,12 @@ Widget Setup
 |Chase UMETA(DisplayName = "Chase"),  				| CharAnimState = Chase       |
 |IsAttacked UMETA(DisplayName = "IsAttacked") ,     		| CharAnimState = IsAttacked  |
 |Dead UMETA(DisplayName = "Dead"),   				| CharAnimState = Dead        |
+|Reload UMETA(DisplayName = "Reload"),   			| CharAnimState = Reload        |
+|TeleportStart UMETA(DisplayName = "TeleportStart"),   		| CharAnimState = TeleportStart        |
+|TeleportEnd UMETA(DisplayName = "TeleportEnd"),   		| CharAnimState = TeleportEnd        |
+|PrepareScatterMine UMETA(DisplayName = "PrepareScatterMine"),  | CharAnimState = PrepareScatterMine        |
+|PrepareMouseBot UMETA(DisplayName = "PrepareMouseBot"),   	| CharAnimState = PrepareMouseBot        |
+|NoMana UMETA(DisplayName = "NoMana"),   			| CharAnimState = NoMana        |
 |None UMETA(DisplayName = "None"),    				| Should not happen	      |
 
 
@@ -170,7 +176,58 @@ Widget Setup
 |void SetSelected();       					| Sets the SelectedIcon selected           	|
 |void SetDeselected();      					| Sets the SelectedIcon delected            	|
 |void SpawnSelectedIcon();       				| Spawns the SelectedIcon         		|	
+
 	
+# ExtendedUnitBase
+
+|Properties (EditAnyWhere + BlueprintReadWrite)                  	|Note                         |
+|-----------------------------------------------------------------------|-----------------------------|
+|float TeleportStartTime = 1.f;         				| Time Spent in UnitState TeleportStart      			|
+|float TeleportEndTime = 0.5f;          				| Time Spent in UnitState TeleportEnd	         		|
+|float TeleportRadius = 70.f;						| Radius which is allowed to Teleport		 		|
+|float TeleportFailedDmg = 10.f;       					| Dmg recived when Teleporting out of Radius			|
+|float TeleportManaCost = 30.f;        					| Mana Cost when using Teleport					|
+|TSubclassOf<class AScatterMine> ScatterMineBaseClass;			| Choose BP_ScatterMine Class (which has also Details to change)|
+|TSubclassOf<class AShield> ShieldBaseClass;     			| Choose BP_Shield Class (which has also Details to change)	|
+|TSubclassOf<class AMouseBotBase> MouseBotBaseClass;         		| Choose BP_MouseBotBase Class (which has also Details to change) |
+|float MouseBotCastTime = 0.4f;         				| Time Spent in UnitState PrepareMouseBot        		|
+|float MouseBotRadius = 15.f;      					| Radius where the MouseBot can be spawned	        	|
+|float BotManaCost = 5.f;						| Mana Cost to Spawn a Mousebot					|
+|class UWidgetComponent* HealthWidgetComp;          			| Choose the WidgetComp for the HealthBar (BP_UnitBaseHealthBar)|
+|float MaxMana = 100.f;        						| Max Mana of the Character					|
+|float ManaRestore = 1.f;						| This amount gets Restored each Time ManaRestoreTime is reached|
+|float ManaRestoreTime = 1.f;    					| ManaRestore gets added to Mana when ManaRestoreTime is reached|
+|float NoManaTime = 1.5f;						| Time Spent in UnitState NoMana			   	|
+
+	
+
+|Properties (BlueprintReadWrite)                  		|Note                         |
+|---------------------------------------------------------------|-----------------------------|
+|float UnitControlTimer = 0.0f;        				| Used in UnitControllerBase Statemachine            |
+|bool ToggleUnitDetection = false;				| Is Used in ControllerBase to toggle unit to Attack |
+|AUnitBase* UnitToChase;       					| Is set to the Unit which should be attacked        |
+|TArray <AUnitBase*> UnitsToChase;          			| Array of all available Units		             |
+|float Health;							| Current Health of the Unit			     |
+|TArray <FVector> RunLocationArray;				| Used for MoveThroughWaypoints in the HUD	     |
+|int32 RunLocationArrayIterator;				| Used for the Iteration of the Array		     |
+|FVector RunLocation;						| Is the Location where the Unit should Run. Used in "Run"|
+|class ASelectedIcon* SelectedIcon;				| The Icon is Hidden when Character is not selected|
+|class AProjectile* Projectile;					| The Current Projectile|
+	
+|Functions (BlueprintCallable)                  		|Note                         |
+|---------------------------------------------------------------|-----------------------------|
+|void IsAttacked(AActor* AttackingCharacter);       		| Gets called when Unit is attacked. Called in UnitControllerBase |
+|void SetWalkSpeed(float Speed);      				| Set Max Walkspeed           |
+|bool SetNextUnitToChase();        				| Chooses UnitToChase from UnitsToChase (closest unit is choosen) |
+|void SetWaypoint(class AWaypoint* NewNextWaypoint);        	| Sets the new Waypoint. Unit walks to Waypoint in State "Patrol" |
+|void SetUnitState( TEnumAsByte<UnitData::EState> NewUnitState);| Used to Set the State of the Unit (UnitControllerBase->UnitControlStateMachine) |
+|TEnumAsByte<UnitData::EState> GetUnitState();       		| Get the current Unit State          		|
+|float GetHealth();       					| Get current health of the Unit          	|
+|void SetHealth(float NewHealth);       			| Set current health of the Unit         	|
+|float GetMaxHealth();      					| Get max health of the Unit            	|
+|void SetSelected();       					| Sets the SelectedIcon selected           	|
+|void SetDeselected();      					| Sets the SelectedIcon delected            	|
+|void SpawnSelectedIcon();       				| Spawns the SelectedIcon         		|		
 
 # CameraBase
 
