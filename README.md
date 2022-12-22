@@ -118,7 +118,7 @@ Here is a List of the Classes and there Functions:
 1. Right Click inside the Content Browser inside the Unreal Editor -> Create Blueprint
 2. Go to "ALL CLASSES" Section and tipe the Name of the Parent Class inside the Search (Choose one of the ParentClasses)
 3. Click on Select
-4. Go in the Details Penal of you BP_Class and Type "TopDownRTSTemplate" into the Search
+4. Go in the Details Penal of you BP_Class and Type "RTS" into the Search
 
 BP_UnitBase Setup
 1. For Character choose a Skeletal Mesh and a Animation Blueprint (there are Example Animation Blueprints in the Blueprint Folder All\Engine\Plugins\TopDownRTSTemplate\Content\TopDownRTSTemplate\Blueprints\Animations)
