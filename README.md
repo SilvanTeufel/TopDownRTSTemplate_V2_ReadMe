@@ -4,7 +4,7 @@ This is the ReadMe of my TopDownRTSTemplate V2.0.0 and higher, a Plugin which is
 V 2.1.0
 
 Big Rework of nearly all Classes. All Propertys Changeable in Details Panel. Added new Classes and Abilitys as well as
-different Enemy Types. Choose a Projectile for your Weapon and more. Video and Docs will follow soon.
+different Enemy Types. Choose a Projectile for your Weapon and more. Video will follow soon.
 
 	
 ## Parent Classes
