@@ -90,7 +90,7 @@ Animations:
 Characters:
 - CameraBase ( A Small RTS Camera with cool responsive Camera-Jump)
 - UnitBase ( Used for Enemys - Ranged, Meele, Flying Units - Propertys like MaxHealth, Attackspeeed, Walkspeed are Adaptable)
-- ExtendedUnitBase ( Parent of UnitBase. Is the TopDown Character. Even more Adjustable Propertys. Can use WeaponTable, ScatterMine Shield and Spawn MouseBots)
+- ExtendedUnitBase ( Child of UnitBase. Is the TopDown Character. Even more Adjustable Propertys. Can use WeaponTable, ScatterMine Shield and Spawn MouseBots)
 
 Controller:
 - ControllerBase (Your Soul)
