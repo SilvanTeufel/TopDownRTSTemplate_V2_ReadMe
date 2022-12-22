@@ -9,8 +9,8 @@ different Enemy Types. Choose a Projectile for your Weapon and more. Video and D
 	
 ## Parent Classes
 
-If RTSUnitTemplate is installed the Classes can be used as Parent Class in Blueprint, so all functions from this Class are available.
-Just use one of the following Classes as Parent Class and or just choose them in your GameMode Blueprint. Category = RTSUnitTemplate. 
+If TopDownRTSTemplate is installed the Classes can be used as Parent Class in Blueprint, so all functions from this Class are available.
+Just use one of the following Classes as Parent Class and or just choose them in your GameMode Blueprint. Category = TopDownRTSTemplate. 
 
 Parentclasses are:
 
@@ -63,13 +63,13 @@ Here is a List of the Classes and there Functions:
 1. Right Click inside the Content Browser inside the Unreal Editor -> Create Blueprint
 2. Go to "ALL CLASSES" Section and tipe the Name of the Parent Class inside the Search (Choose one of the ParentClasses)
 3. Click on Select
-4. Go in the Details Penal of you BP_Class and Type "RTSUnitTemplate" into the Search
+4. Go in the Details Penal of you BP_Class and Type "TopDownRTSTemplate" into the Search
 
 BP_UnitBase Setup
-1. For Character choose a Skeletal Mesh and a Animation Blueprint (there are Example Animation Blueprints in the Blueprint Folder All\Engine\Plugins\SwarmSimulator\Content\SwarmSimulator\Blueprints\Animations)
+1. For Character choose a Skeletal Mesh and a Animation Blueprint (there are Example Animation Blueprints in the Blueprint Folder All\Engine\Plugins\TopDownRTSTemplate\Content\TopDownRTSTemplate\Blueprints\Animations)
 2. Adapt the Trigger Capsule to the Mesh
 3. If you need a new Animation Blueprint for your Mesh Create it -> Right Click -> Animations -> Animation Blueprint
-4. Copy the Statemachine from my Example Animations Blueprints (All\Engine\Plugins\SwarmSimulator\Content\SwarmSimulator\Blueprints\Animations)
+4. Copy the Statemachine from my Example Animations Blueprints (All\Engine\Plugins\SwarmSimulator\Content\TopDownRTSTemplate\Blueprints\Animations)
 5. Go through all States and change the Animation.
 6. Check if the Transition Rules are Setup Correctly. If not you can easily choose the right state from a dropdown.
 7. Check Details of the Blueprint by Typing SwarmSimulator in the Search.
@@ -77,7 +77,7 @@ BP_UnitBase Setup
 9. Choose the AI Controller for the Unit
 
 BP_UnitBaseController
-1. When created the Blueprint u can just adapt the Details Panel by Typing in Search "RTSUnitTemplate"
+1. When created the Blueprint u can just adapt the Details Panel by Typing in Search "TopDownRTSTemplate"
 2. Choose the BP_UnitBaseController in your BP_UnitBase under "Ai Controller"
 
 Character Animation Statemachine
@@ -89,7 +89,7 @@ Character Animation Statemachine
 
 HUD/Actor Setup
 1. Create a Blueprint like mentioned above.
-2. Type "RTSUnitTemplate" in Search Details.
+2. Type "TopDownRTSTemplate" in Search Details.
 3. Use Functions and Variables in EvenGraph and Construction Script. Or just use the Parent Class as it is.
 
 
