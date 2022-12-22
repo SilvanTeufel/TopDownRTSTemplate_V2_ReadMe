@@ -41,7 +41,7 @@ Controller:
 - ExtendedUnitControllerBase (Extends the Soul of the UnitBase for the ExtendedUnitBase)
 - MouseBotControllerBase (Soul of the MouseBot)
 
-Controller:
+GameMode:
 - ComponentGeneratorGameMode (Can be used for Random Level Generator and Mob-Spawning - see LevelTwo)
 
 Hud:
