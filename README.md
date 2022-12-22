@@ -35,15 +35,20 @@ Characters:
 - ExtendedUnitBase ( Parent of UnitBase. Is the TopDown Character. Even more Adjustable Propertys. Can use WeaponTable, ScatterMine Shield and Spawn MouseBots)
 
 Controller:
-- ControllerBase (Can be used to Control the UnitBase and the ExtendedUnitBase)
-- UnitControllerBase (This is needed for the UnitBase)
+- ControllerBase (Your Soul)
+- UnitControllerBase (Soul of the UnitBase)
+- ExtendedUnitControllerBase (Extends the Soul of the UnitBase for the ExtendedUnitBase)
+- MouseBotControllerBase (Soul of the MouseBot)
+
+Controller:
+- ComponentGeneratorGameMode (Can be used for Random Level Generator and Mob-Spawning - see LevelTwo)
 
 Hud:
 - HUDBase
 
 Widgets:
 - UnitBaseActionBar (Used mainly for the Extended UnitBase)
-- UnitBaseHealthBar
+- UnitBaseHealthBar (The Healthbar for the UnitBase and the ExtendedUnitBase)
 
 
 For ControllerBase, if you want to use the Controller, you have to adapt your Settings (Pictures in "Document/Inputs" Folder), or "Import Keyboard Settings" (topic above).
