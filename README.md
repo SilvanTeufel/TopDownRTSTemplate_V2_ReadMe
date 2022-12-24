@@ -368,7 +368,19 @@ Widget Setup
 |void OnUnitDetected(const TArray<AActor*>& DetectedUnits);     		| Is called when a Unit is detected. UnitToChase is set.  |
 |void RotateToAttackUnit(AUnitBase* AttackingUnit, AUnitBase* UnitToAttack);  	| Rotates the Unit to the Unit which will be Attacked.            |
 |void UnitControlStateMachine(float DeltaSeconds);  				| Is called in Tick          |
+|void CreateProjectile (AUnitBase* UnitBase); 					| Creates a Projectile          |
+
+# ExtendedUnitControllerBase
 	
+|Functions (BlueprintCallable)                  				|Note                         |
+|-------------------------------------------------------------------------------|-----------------------------|
+|void ExtendedUnitControlMachine(float DeltaSeconds); 				| StateMachine for Extentended UnitBase    |
+
+# MouseBotControllerBase
+	
+|Functions (BlueprintCallable)                  				|Note                         |
+|-------------------------------------------------------------------------------|-----------------------------|
+|void MouseBotStateMachine(float DeltaTime);					| StateMachine for Mousebot    |
 	
 # ControllerBase
 
