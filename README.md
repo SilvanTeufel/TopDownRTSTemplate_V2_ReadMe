@@ -28,23 +28,30 @@ If the plugin is in another folder, you should copy it here.
 Open Unreal Editor. Click Edit -> Plugins to open the plugin window.
 Search for TopDownRTSTemplate and put a check mark at it.
 
-## Import Keyboard Settings
+## Import Settings
 
-You Can create your own Shortcuts:
+RTSUnitTemplate/Document/Description_Backup_2022-11-14_102425_RTSUnitTemplate.ini
+RTSUnitTemplate/Document/Gameplay_Debugger_Backup_2022-11-14_102535_RTSUnitTemplate.ini
+RTSUnitTemplate/Document/Input_Backup_2022-11-14_102458_RTSUnitTemplate.ini (Deprecated, use Enhanced Keyboard Settings)
+RTSUnitTemplate/Document/Maps_&_Modes_Backup_2022-11-14_102333_RTSUnitTemplate.ini
 
-![image](https://user-images.githubusercontent.com/45244380/209095077-73e86661-e4b4-4b20-9375-76edbc34b994.png)
+## Enhanced Keyboard Settings
 
-Maps and Mode Settings:
+You can Change Inputs at: All\Engine\Plugins\TopDownRTSCamLib\Content\Blueprints\Controls
 
-![image](https://user-images.githubusercontent.com/45244380/209095420-3fc221ef-ba44-40ae-ad7f-e33671ea12e8.png)
+For GameplayTags you have to set AssetMangerClass in ProjectSettings (Restart Project after change):
 
-Debugger Settings:
+![image](https://user-images.githubusercontent.com/45244380/211891213-c16b45c3-25d7-4af2-bb5c-d4aeb124ceec.png)
 
-![image](https://user-images.githubusercontent.com/45244380/209095690-e4918f3c-1a06-4fa1-a333-ed95cf79e720.png)
+Go to ProjectSettings->Input and set EnhancedIputComponentBase:
 
-Or Import my Settings (for you this Plugin is inside the Engine folder):
+![image](https://user-images.githubusercontent.com/45244380/211891263-032cfbc6-120c-40f3-82f6-b1d7cff938a3.png)
 
-![image](https://user-images.githubusercontent.com/45244380/209095332-e0fd7ee9-6fd1-4837-8a3f-0e4a78e22936.png)
+YOu can set MappingContext and ControlAsset in the BP_CameraBase:
+
+![image](https://user-images.githubusercontent.com/45244380/212332329-42eaec24-7096-4728-8c8a-ede7846c0efc.png)
+
+![image](https://user-images.githubusercontent.com/45244380/212332385-9137f8ed-212e-4c99-bcb5-def35dd7160b.png)
 
 
 You can also Download the Settings here from Github.
