@@ -140,10 +140,10 @@ BP_UnitBase Setup
 1. For Character choose a Skeletal Mesh and a Animation Blueprint (there are Example Animation Blueprints in the Blueprint Folder All\Engine\Plugins\TopDownRTSTemplate\Content\TopDownRTSTemplate\Blueprints\Animations)
 2. Adapt the Trigger Capsule to the Mesh
 3. If you need a new Animation Blueprint for your Mesh Create it -> Right Click -> Animations -> Animation Blueprint
-4. Copy the Statemachine from my Example Animations Blueprints (All\Engine\Plugins\SwarmSimulator\Content\TopDownRTSTemplate\Blueprints\Animations)
+4. Copy the Statemachine from my Example Animations Blueprints (All\Engine\Plugins\TopDownRTSTemplate\Content\TopDownRTSTemplate\Blueprints\Animations)
 5. Go through all States and change the Animation.
 6. Check if the Transition Rules are Setup Correctly. If not you can easily choose the right state from a dropdown.
-7. Check Details of the Blueprint by Typing SwarmSimulator in the Search.
+7. Check Details of the Blueprint by Typing TopDownRTSTemplate in the Search.
 8. Use Functions and Variables in EvenGraph and Construction Script. Or just use the Parent Class as it is.
 9. Choose the AI Controller for the Unit
 
@@ -155,7 +155,7 @@ Character Animation Statemachine
 1. Right Click Create Animation -> Animation Blueprint
 2. Choose Parent Class of the CharacterBase -> CharacterBaseAnimInstance / EnemyBase -> EnemyBaseAnimInstance / MouseBotBase -> MouseBotBaseAnimInstance
 3. Choose Skeleton
-4. Copy Statemachine from (All\Engine\Plugins\SwarmSimulator\Content\SwarmSimulator\Blueprints\Animations)
+4. Copy Statemachine from (All\Engine\Plugins\TopDownRTSTemplate\Content\TopDownRTSTemplate\Blueprints\Animations)
 5. You can change the Time the Unit stuck in the Animation. This will also change Gameplay. To Adjust the Animation Times take a Look into the ControllerBase properties.
 
 HUD/Actor Setup
@@ -166,8 +166,8 @@ HUD/Actor Setup
 
 Widget Setup
 1. Widgets have to be choosen inside the Blueprints of a Character
-2. Example Widgets are at (All\Engine\Plugins\RTSUnitTemplate\Content\RTSUnitTemplate\Blueprints\Widgets)
-3. Example Character with choosen Widgets can be found at (All\Engine\Plugins\RTSUnitTemplate\Content\RTSUnitTemplate\Blueprints\Character)
+2. Example Widgets are at (All\Engine\Plugins\TopDownRTSTemplate\Content\TopDownRTSTemplate\Blueprints\Widgets)
+3. Example Character with choosen Widgets can be found at (All\Engine\Plugins\TopDownRTSTemplate\Content\TopDownRTSTemplate\Blueprints\Character)
 4. Widget hast to been set Space "Screen" and Draw at Desired Size to true. (In the Widget and in the Character BP)
 5. Widget Class has to choose a Blueprint (in the Character BP). Or just use the Parent Class like it is.
 
