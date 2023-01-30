@@ -62,6 +62,7 @@ Weapon will be Attached to Socket in Skeleton, please Name the Socket:
 ![image](https://user-images.githubusercontent.com/45244380/213906326-dfe3a99f-48a7-49af-9090-50b9f600bbb1.png)
 
 You can also add a Preview Asset and Rotate/Move the Weapon according to its best Position.
+Check the WeaponTable in Blueprints/Actors/WeaponTable
 
 ## Test Example Map
 
